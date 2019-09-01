@@ -3,7 +3,7 @@ import Axios from 'axios';
 export const returnItem = (data) => {
   return{
     type: 'RETURN_ITEM',
-    payload: Axios.patch('http://localhost:8080/api/rent',data)
+    payload: Axios.patch('https://salty-lake-72952.herokuapp.com/api/rent',data)
   }
 }
 
@@ -11,7 +11,7 @@ export const cekRentItem = (data) => {
   console.log('response = ',data.id_user);
   return {
     type: 'BACK_ITEM',
-    payload: Axios.get ('http://localhost:8080/api/rent',{
+    payload: Axios.get ('https://salty-lake-72952.herokuapp.com/api/rent',{
       params:{
         id_user:data.id_user
       },
@@ -26,7 +26,7 @@ export const cekRentItem = (data) => {
 export const getItem = () => {
   return {
     type: 'GET_ITEM',
-    payload: Axios.get ('http://localhost:8080/api/book',{
+    payload: Axios.get ('https://salty-lake-72952.herokuapp.com/api/book',{
       headers:{
         token: window.localStorage.getItem('token')
       }
@@ -38,7 +38,7 @@ export const getItem = () => {
 export const Borrow = (data) => {
   return {
     type: 'BORROW_ITEM',
-    payload: Axios.post ('http://localhost:8080/api/rent',data,{
+    payload: Axios.post ('https://salty-lake-72952.herokuapp.com/api/rent',data,{
       headers:{
         token: window.localStorage.getItem('token')
       }
@@ -49,7 +49,7 @@ export const Borrow = (data) => {
 export const postItem = (data) => {
   return {
     type: 'POST_ITEM',
-    payload: Axios.post ('http://localhost:8080/api/books',data),
+    payload: Axios.post ('https://salty-lake-72952.herokuapp.com/api/books',data),
   };
   
 };
@@ -59,7 +59,7 @@ export const deleteItem = (data) => {
   
   return {
     type: 'DEL_ITEM',
-    payload: Axios.delete ('http://localhost:8080/api/books/',{
+    payload: Axios.delete ('https://salty-lake-72952.herokuapp.com/api/books/',{
       params:{
         id:data
       },
@@ -75,7 +75,7 @@ export const updateItem = (data) => {
   
   return {
     type: 'UP_ITEM',
-    payload: Axios.patch ('http://localhost:8080/api/books/',data,{
+    payload: Axios.patch ('https://salty-lake-72952.herokuapp.com/api/books/',data,{
       headers:{
         token: window.localStorage.getItem('token')
       }

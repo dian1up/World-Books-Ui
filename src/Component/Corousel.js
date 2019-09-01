@@ -7,7 +7,7 @@ class Corousel extends React.Component{
     books: []
   }
   componentDidMount=()=>{
-    Axios.get('http://localhost:8080/api/books')
+    Axios.get('https://salty-lake-72952.herokuapp.com/api/books')
     .then(res => {
       this.setState({books: res.data})
       console.log('api = ', this.state.books)
