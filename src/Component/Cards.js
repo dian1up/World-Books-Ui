@@ -17,7 +17,7 @@ class Cards extends React.Component {
     getItem: [],
   };
   handleError=()=>{
-    window.location='/login'
+    window.location='/Login'
   }
   componentDidMount = async () => {
     await this.props.dispatch (getItem ())
@@ -38,7 +38,7 @@ class Cards extends React.Component {
         confirmButtonText: 'Log In'
       }).then((result) => {
         if (result.value) {
-          window.location='/login'
+          window.location='/Login'
         }
       })
       
