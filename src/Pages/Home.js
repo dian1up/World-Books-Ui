@@ -248,7 +248,7 @@ class HomePage extends React.Component {
             showConfirmButton: false,
             timer: 2000
           })
-          window.location='/login' 
+          window.location='/Login' 
         }
       })
       .catch(()=>{
