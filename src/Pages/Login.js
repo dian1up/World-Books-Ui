@@ -51,7 +51,7 @@ class Login extends Component {
             showConfirmButton: false,
             timer: 2000
           }).then(()=>{
-            window.location='/login' 
+            window.location='/Login' 
           })
           
         }
